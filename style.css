@@ -1,0 +1,136 @@
+:root {
+  --primary-color: hsl(0, 0%, 98%);
+  --Gray: hsl(0, 0%, 41%);
+  --Black: hsl(0, 0%, 8%);
+}
+
+/* reset */
+body,
+main,
+nav,
+h1,
+p {
+  margin: 0;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* font */
+:root {
+  --font-family: "Epilogue", sans-serif;
+}
+
+/* desktop styles */
+
+body {
+  font-family: var(--font-family);
+  margin: 0.875rem;
+}
+
+main {
+  /* margin: 0.9rem;
+  justify-content: center;
+  align-items: center; */
+}
+
+.site-nav {
+  display: flex;
+}
+
+.home-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  width: 100%;
+  background-color: burlywood;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  width: 100%;
+}
+.hero-img {
+  object-fit: cover;
+  max-width: 100%;
+  display: block;
+  height: auto;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+p {
+  font-size: 1.3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.btn-learn-more {
+  font-size: 1.89rem;
+  color: var(--primary-color);
+  background-color: var(--Black);
+  border-style: none;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.client-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8rem;
+}
+ul {
+  display: flex;
+}
+
+li {
+  text-decoration: none;
+  color: var(--Gray);
+  font-weight: 400;
+  padding: 1.2rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.site-nav li:hover {
+  color: var(--Black);
+  font-weight: bold;
+}
+
+.right-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.register {
+  border-radius: 1rem;
+  border: 1px solid var(--Black);
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--Black);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
