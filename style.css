@@ -175,6 +175,8 @@ a {
   border: 1px solid var(--Black);
   border-radius: 1em;
   list-style: none;
+  color: var(--Gray);
+  text-align: center;
 }
 
 .btn-dropdown {
