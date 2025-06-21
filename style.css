@@ -7,7 +7,7 @@
 /* reset */
 body,
 main,
-site-nav,
+.topnav,
 h1,
 p {
   margin: 0;
@@ -37,7 +37,7 @@ main {
   align-items: center;
 }
 
-.site-nav {
+.topnav {
   display: flex;
   margin: 0;
   padding: 0;
@@ -143,7 +143,7 @@ li {
   transition: all 0.1s ease-in-out;
 }
 
-.site-nav li:hover {
+.topnav li:hover {
   color: var(--Black);
   font-weight: bold;
   cursor: pointer;
@@ -164,4 +164,22 @@ li {
 a {
   text-decoration: none;
   color: var(--Black);
+}
+
+.dropdown-menu {
+  flex-direction: column;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border: 1px solid var(--Black);
+  border-radius: 1em;
+  list-style: none;
+}
+
+.btn-dropdown {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  border: none;
 }

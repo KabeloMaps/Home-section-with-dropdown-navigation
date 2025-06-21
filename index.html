@@ -18,41 +18,56 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="script" href="./script.js" />
-
+    <script src="./script.js" defer></script>
     <title>Intro section with dropdown navigation</title>
   </head>
   <body>
     <header>
-      <nav class="site-nav">
-        <img src="./images/logo.svg" alt="logo-icon" />
+      <nav class="topnav">
+        <img class="logo" src="./images/logo.svg" alt="logo-icon" />
         <ul class="left-nav">
           <li>
-            <a href="#Features"
-              >Features<img
-                style="padding-left: 10px"
-                id="dropdown-arrow"
-                src="./images/icon-arrow-down.svg"
-                alt="arrow-icon"
-              />
-            </a>
+              Features
+           <button type="button" class="btn-dropdown" >
+            <img style="padding-left: 10px"  class="dropdown-arrow" src="./images/icon-arrow-down.svg" alt="arrow-icon"/>
+
+           </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">
+                <img src="./images/icon-todo.svg" alt="todo icon">
+                Todo List</a></li>
+              <li><a href="#">
+                <img src="./images/icon-calendar.svg" alt="calender icon">
+                Calender</a></li>
+              <li><a href="#">
+                <img src="./images/icon-reminders.svg">
+                Reminders</a></li>
+              <li><a href="#">
+                <img src="./images/icon-planning.svg" alt="planning icon">
+                Planning</a></li>
+            </ul>
           </li>
           <li>
-            <a href="#Company"
-              >Company<img
-                style="padding-left: 10px"
-                id="dropdown-arrow"
-                src="./images/icon-arrow-down.svg"
-                alt="arrow-icon"
-            /></a>
+              Company
+              <button type="button" class="btn-dropdown">
+                <img style="padding-left: 10px" class="dropdown-arrow" src="./images/icon-arrow-down.svg"
+                alt="arrow-icon">
+              </button>
+            
+            <ul class="dropdown-menu">
+              <li><a href="#">
+                History</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
           </li>
-          <li><a href="#Careers">Careers</a></li>
-          <li><a href="#About">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">About</a></li>
         </ul>
 
         <ul class="right-nav">
-          <li><a href="#Login">Login</a></li>
-          <li class="register"><a href="#Register">Register</a></li>
+          <li><a href="#">Login</a></li>
+          <li class="register"><a href="">Register</a></li>
         </ul>
       </nav>
     </header>

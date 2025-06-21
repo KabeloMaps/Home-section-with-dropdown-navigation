@@ -36,11 +36,12 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
--
+- Grid system
 
 ### What I learned
 
--
+- Dropdown navigation
+- Responsive Design
 
 ### Continued development
 
@@ -49,5 +50,3 @@ Users should be able to:
 ### Useful resources
 
 -
-
-# Home-section-with-dropdown-navigation
