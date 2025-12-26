@@ -55,38 +55,46 @@ main {
 } */
 
 .home-card {
+  display: flex;
+  flex-direction: row;
+}
+.hero-img {
   width: 100%;
-  text-align: left;
+  height: 100%;
+  height: 100vh;
+
+  object-fit: cover;
 }
 
 .home-description {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 66vh;
-  margin: 5rem;
+  margin: 1rem;
   margin-bottom: auto;
   margin-top: 10rem;
+  background-color: rgb(0, 255, 115);
 }
 
 .hero-section {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  object-fit: contain;
+
   width: 100%;
 }
-.hero-img {
+.hero-section {
   display: block;
-  width: 70%;
+  width: 100%;
   height: auto;
   object-fit: cover;
-  margin-top: 3rem;
+  background-color: rgb(114, 87, 114);
 }
 
 h1 {
@@ -172,11 +180,26 @@ a {
   align-items: center;
   justify-content: center;
   position: absolute;
-  border: 1px solid var(--Black);
+  /* border: 1px solid var(--Gray); */
   border-radius: 1em;
+  box-shadow: 0 1rem 1rem var(--Black);
   list-style: none;
   color: var(--Gray);
   text-align: center;
+  padding: 1rem;
+  margin: 0.85rem;
+}
+.dropdown-menu li {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+}
+.dropdown-menu a {
+  color: var(--Gray);
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
 }
 
 .btn-dropdown {
@@ -184,4 +207,8 @@ a {
   margin: 0;
   background-color: white;
   border: none;
+}
+
+.Heading1 {
+  font-size: 7rem;
 }

@@ -1,61 +1,73 @@
-## Table of contents
+# React + TypeScript + Vite
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Overview
+Currently, two official plugins are available:
 
-### The challenge
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Users should be able to:
+## React Compiler
 
-- View the relevant dropdown menus on desktop and mobile when interacting with the navigation links
-- View the optimal layout for the content depending on their device's screen size
-- See hover states for all interactive elements on the page
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### Screenshot
+## Expanding the ESLint configuration
 
-![alt text](image.png)
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-### Links
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-- Solution URL: https://github.com/KabeloMaps/Home-section-with-dropdown-navigation.git
-- Live Site URL: https://app.netlify.com/projects/home-section-with-dropdown-navigation/overview
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-## My process
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
 
-- I began with HTML structure, then went on to the semantic layout and accessibility.
-- I then styled the structure with vanilla CSS and implemented the grid system for better responsive design.
-- Javascript was added last to implement the dropdown navigation by controlling the visibility of the dropdown menu and toggling the dropdown icon dynamically.
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-### Built with
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-- Semantic HTML5 markup
-- CSS Grid
-- Vanilla CSS
-- Basic Javascript (DOM manipulation)
-
-### What I learned
-
-- How to properly link and defer Javascript file to ensure the script is loaded after the DOM is parsed
-- How to use querySelectorAll to select all the relevant elements and to loop through all of them and attach event listeners
-- How to change icons dynamically through using element.src
-- How to implement a dropdown navigation using Javascript
-- Basic Javascript DOM manipulation
-- Responsive Design
-
-### Continued development
-
-- Make the dropdown fully keyboard accessible using focus and key events
-- Javascript events and logic
-- HTML and CSS accessibility and best practices
-- Modular Javascript
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
