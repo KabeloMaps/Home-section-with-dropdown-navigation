@@ -16,7 +16,7 @@ const HeroSection = () => {
           Get your team in sync, no matter your location. Streamline processes,
           create team rituals, and watch productivity soar.
         </p>
-        <button className="btn text-4 bg-black text-white py-2 px-4 rounded-xl">
+        <button className="btn text-5 bg-black text-white py-2 px-4 rounded-xl">
           Learn more
         </button>
       </div>
