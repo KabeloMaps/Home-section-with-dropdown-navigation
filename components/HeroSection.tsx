@@ -1,5 +1,3 @@
-import React from "react";
-
 const HeroSection = () => {
   return (
     <main className="hero-section flex flex-col items-center justify-center gap-8 p-6 md:flex-row-reverse md:gap-16 md:p-16">
@@ -22,7 +20,7 @@ const HeroSection = () => {
           Learn more
         </button>
       </div>
-      <div className="client-logo-container w-full flex items-center justify-center gap-15">
+      <div className="client-logo-container w-full flex items-center justify-center gap-15 pt-7">
         <img
           className="size-29"
           src="/images/client-databiz.svg"
