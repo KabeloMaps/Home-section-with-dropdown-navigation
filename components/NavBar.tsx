@@ -31,6 +31,15 @@ const navigation = [
   { name: "About", href: "#" },
 ];
 
+const AuthButtons = ({ className = "" }) => (
+  <div className={`flex gap-4 ${className}`}>
+    <a href="/login">Login</a>
+    <a href="/register" className="border border-black rounded-xl px-4 py-1">
+      Register
+    </a>
+  </div>
+);
+
 const NavBar = () => {
   return (
     <Disclosure as="nav" className="relative  bg-white">
@@ -95,27 +104,8 @@ const NavBar = () => {
                     )}
                   </div>
 
-                  <div className="nav-end  absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                    <button
-                      type="button"
-                      className="relative rounded-full p-1 text-gray-400 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500"
-                    >
-                      <span className="absolute -inset-1.5" />
-                      <span className="sr-only">View notifications</span>
-                      <div className="flex gap-4">
-                        <a href="/login">Login</a>
-                        <a href="/register">Register</a>
-                      </div>
-                    </button>
-
-                    {/* Profile dropdown */}
-                    <Menu as="div" className="relative ml-3">
-                      <MenuButton className="relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
-                        <span className="absolute -inset-1.5" />
-                        <span className="sr-only">Open user menu</span>
-                        <button>Register</button>
-                      </MenuButton>
-                    </Menu>
+                  <div className="hidden sm:flex ml-auto items-center">
+                    <AuthButtons />
                   </div>
                 </div>
               </div>
