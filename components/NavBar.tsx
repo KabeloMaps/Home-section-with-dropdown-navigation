@@ -32,7 +32,7 @@ const navigation = [
 ];
 
 const AuthButtons = ({ className = "" }) => (
-  <div className={`flex gap-4 ${className}`}>
+  <div className={`flex gap-4 bg-green-700 ${className}`}>
     <a href="/login">Login</a>
     <a href="/register" className="border border-black rounded-xl px-4 py-1">
       Register
@@ -46,7 +46,7 @@ const NavBar = () => {
       {({ open }) => (
         <div>
           {" "}
-          <div className="mx-auto max-w-7xl px-2  sm:px-6 lg:px-8">
+          <div className="px-2 bg-green-700  sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 right-0 flex items-center pr-4 sm:hidden">
                 <DisclosureButton className="fixed top-4 right-4 z-50 sm:hidden">
@@ -104,7 +104,7 @@ const NavBar = () => {
                     )}
                   </div>
 
-                  <div className="hidden sm:flex ml-auto items-center">
+                  <div className="hidden sm:flex ml-auto items-center ">
                     <AuthButtons />
                   </div>
                 </div>
@@ -162,7 +162,7 @@ data-closed:translate-x-ful   data-open:translate-x-0
                 )
               )}
 
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col  gap-6">
                 {" "}
                 <a href="/register" className=" rounded-xl p-2 text-center">
                   {" "}

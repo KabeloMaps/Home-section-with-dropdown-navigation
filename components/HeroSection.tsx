@@ -1,6 +1,6 @@
 const HeroSection = () => {
   return (
-    <main className="hero-section flex bg-amber-500 flex-col items-center justify-center gap-8 p-6 sm:flex-row-reverse sm:gap-16 sm:p-16">
+    <main className="hero-section flex  flex-col items-center justify-center gap-8 p-6 sm:flex-row-reverse sm:gap-16 sm:p-16">
       <div className="image-container w-full h-full ">
         {/* Mobile */}
         <img
@@ -23,7 +23,8 @@ const HeroSection = () => {
           </h1>
           <p className="text-[1.85rem] text-center sm:text-start text-gray-600 pt-5">
             Get your team in sync, no matter your location. Streamline
-            processes, create team rituals, and watch productivity soar.
+            processes, create team rituals, and watch productivity soar. Dream
+            Big
           </p>
           <button className="btn text-[2.65rem] sm:text-[1.75rem] bg-black text-white mt-12 py-6 px-14  rounded-[2.25rem] hover:bg-white hover:text-black">
             Learn more
